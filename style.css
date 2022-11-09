@@ -1,0 +1,275 @@
+/* Configuracion para toda la pagina */
+html {
+    font-family: 'Montserrat', sans-serif; font-size: 11.5px;
+}
+
+/* Configuracion para todo el body */
+body{
+    margin: 0px;
+    border: 0px;
+    background-color: #efefef;
+    padding: 52px 0px 0px 0px; /* Para que tenga en cuenta el tamaño de la barrita fija, o si no va a empezar a aparecer el cuerpo detras de la barra de navegación */
+}
+
+/* Configuracion para la barra superior */
+.barraSuperior{
+    background-color:  #ffffff;
+    height:  30px;
+    position: fixed; /*Fijar la barrita */
+    width: 100%; /* Que ocupe el ancho de toda la pantalla */
+    top: 0; /* Que se quede arriba como punto de referencia*/
+    left: 0; /* Y que se quede a la izquierda como punto de referencia*/
+    border-style: solid; 
+    border-width: 0.1rem;
+    border-color: #bebebe;
+    color: white;
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/* configuracion logo instagrama barra superior */
+.logoInstagram {
+    cursor: pointer;
+    margin: 0;
+}
+
+/* configuracion buscador barra superior */
+.buscador{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input.src{
+    padding: 8px 10px 8px 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    border:none;
+    background-color: rgb(238, 236, 236);
+    background: rgb(238, 236, 236) url("lupa.png");
+    width: 228px 25px;
+}
+
+input.src:hover{
+    background-color: rgb(238, 236, 236);
+    box-shadow: 0 0 5px #394057
+}
+
+input.src:focus{   
+    outline:none;
+}
+  
+
+/* configuracion seccion logos barra superior */
+.seccionIconosBarraSuperior{
+    flex-direction: row;
+    justify-content: space-around;
+    display: flex;
+}
+
+/* configuracion logos barra superior */
+header .iconoBarraSuperior{
+    width: 45px;
+    height: 24px;
+    cursor: pointer;
+    margin: 0px;
+}
+
+/* configuracion profile de la barra superior */
+header .profile {
+    width: 24px;
+    height: 24px;
+    border-radius: 18px;
+}
+
+/* Configuracion de la barra de historias */
+.barraStories{
+    background-color: #fff;
+    margin: 2rem auto;
+    border-style: solid; 
+    border-width: 0.1rem;
+    border-color: #bebebe;
+    border-radius: 0.2rem;
+    padding: 0.25rem 0;
+    overflow-x: scroll; 
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* configuracion de historia de perfil en la barra de historias */
+section .profileStories{
+    margin: 1rem;
+    padding: 0.25rem 0;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    
+}
+
+/* configuracion usernames de users de la barra de historias */
+.barraStories article p{
+    text-align: center; 
+    margin: 0 ;
+}
+
+/* Configuracion de username de perfil de la barra de historias */
+section .profileStories img {
+    display: block;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px;
+    border-style: solid;
+    background-clip: padding-box; 
+    border-color: rgb(212, 8, 212); /* REVISAR */
+    /*border-image: linear-gradient(to right, red, orange);  REVISAR */
+    padding: 2px;
+}
+
+/* Configuracion del contenedor de los post */
+.container{
+    width: 602px;
+    margin: 0 auto;
+}
+
+/* Configuracion del post */
+section .post{
+    transition: box-shadow 0.7s ease; 
+    background-color: #fff;
+    margin: 1.5rem 0;
+    border-style: solid; 
+    border-width: 0.1rem;
+    border-color: #bebebe;
+    border-radius: 0.2rem;
+    padding: 0.25rem 0;
+}
+
+/* configuracion de la barra superior del post */
+.barraSuperiorPost {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* configuracion foto profile del post */
+section .post .profilePost img{
+    margin: 7px 0px 7px 7px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px;
+    border-style: solid;
+    background-clip: padding-box; 
+    border-color: rgb(212, 8, 212); /* REVISAR */
+    /*border-image: linear-gradient(to right, red, orange);  REVISAR */
+    padding: 2px;
+    cursor: pointer;  
+
+    
+}
+
+/* configuracion puntos post */
+section .post .trespuntos img{
+    margin: 7px 7px 7px 7px;
+    width: 20px;
+    height: 20px;
+    border-style: none;
+    padding: 3.5px;
+    cursor: pointer; 
+}
+
+.trampa {
+    flex-grow: 2; /* que tanto crece con relación a los otros
+    el dos es que ocupa el doble en comparación */
+}
+
+/* configuracion iconos post */
+.iconosPost{
+    flex-direction: row;
+    justify-content: space-around;
+    display: flex;
+}
+
+/* configuracion iconos post especificos */
+.iconosPost div{
+    flex-direction: row;
+    justify-content: space-around;
+    display: flex;
+}
+
+/* configuracion iconos post especificos */
+.iconosPost div svg{
+    margin: 7px 7px 7px 7px;
+    cursor: pointer; 
+}
+
+/*configuracion de letreros de username, likes, comentarios y hastags*/
+section .post .username, section .post .likes, section .post .hastag, section .post .comments{
+    cursor: pointer;
+
+}
+
+/* configuracion para opacidad de texto de comentarios y hora de publicacion */
+section .post .postHour, section .post .comments {
+    color:#9c9c9c;
+}
+
+/* configuracion texto de hastags */
+section .post .hastag {
+    color:#0a298d;
+}
+
+/* Configuracion de sombra de post */
+section .post:hover{
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0,0,0,0.3);
+}
+
+/* Configuracion de margenes de letreros en post */
+section .post h2, section .post p {
+    margin: 1rem;
+}
+
+/* configuracion de barra inferior*/
+footer {
+    background-color: white;
+    padding: 3rem;
+    color: black;
+}
+
+/* Configuracion de seccion de barra inferior */
+footer section {
+    float: right;
+    
+}
+
+/* Configuracion de barra inferior (otros) */
+footer p {
+    margin: 0;
+}
+
+/* Configuracion de animacion de letreros */
+footer a {
+    transition: color 0.3s ease;
+    color: black;
+    text-decoration: none;
+}
+
+/* Configuracion de animacion de letremos de barra inferior */
+footer a:hover {
+    color: cornflowerblue;
+}
+
+/* Preguntas:
+1) ¿cómo hacer el degradado rosadito de la bolita
+2) ¿por qué la parte de la barra superior esta actuando 
+como si fuera un ícono separado y no se distribuye con los otros?
+3) ¿cómo hacer para que al dar clic en el botón buscar 
+no aparezca el borde negro?
+4) ¿cómo hacer para que la barra de historias quede como la de insta?
+5) ¿cómo poner los punticos a la derecha?
+*/
